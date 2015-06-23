@@ -4,16 +4,16 @@ import javax.persistence.*;
 import java.sql.Timestamp;
 
 /**
- * Created by ÖÇ¿µ on 2015/6/23 0023.
+ * Created by æ™ºåº· on 2015/6/23 0023.
  */
 @Entity
 @Table(name = "send_normal", schema = "", catalog = "emaildb")
 public class SendNormalEntity {
     private int snid;
-    private String sender;
     private String reciver;
+    private String subject;
+    private String content;
     private Timestamp sendTime;
-    private EmailContentEntity emailContentByEid;
 
     @Id
     @Column(name = "snid", nullable = false, insertable = true, updatable = true)
@@ -25,15 +25,6 @@ public class SendNormalEntity {
         this.snid = snid;
     }
 
-    @Basic
-    @Column(name = "sender", nullable = false, insertable = true, updatable = true, length = 100)
-    public String getSender() {
-        return sender;
-    }
-
-    public void setSender(String sender) {
-        this.sender = sender;
-    }
 
     @Basic
     @Column(name = "reciver", nullable = false, insertable = true, updatable = true, length = 2147483647)
@@ -43,6 +34,26 @@ public class SendNormalEntity {
 
     public void setReciver(String reciver) {
         this.reciver = reciver;
+    }
+
+    @Basic
+    @Column(name = "subject", nullable = false, insertable = true, updatable = true, length = 100)
+    public String getSubject() {
+        return subject;
+    }
+
+    public void setSubject(String subject) {
+        this.subject = subject;
+    }
+
+    @Basic
+    @Column(name = "content", nullable = false, insertable = true, updatable = true, length = 16777215)
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
     }
 
     @Basic
@@ -63,8 +74,9 @@ public class SendNormalEntity {
         SendNormalEntity that = (SendNormalEntity) o;
 
         if (snid != that.snid) return false;
-        if (sender != null ? !sender.equals(that.sender) : that.sender != null) return false;
         if (reciver != null ? !reciver.equals(that.reciver) : that.reciver != null) return false;
+        if (subject != null ? !subject.equals(that.subject) : that.subject != null) return false;
+        if (content != null ? !content.equals(that.content) : that.content != null) return false;
         if (sendTime != null ? !sendTime.equals(that.sendTime) : that.sendTime != null) return false;
 
         return true;
@@ -73,19 +85,10 @@ public class SendNormalEntity {
     @Override
     public int hashCode() {
         int result = snid;
-        result = 31 * result + (sender != null ? sender.hashCode() : 0);
         result = 31 * result + (reciver != null ? reciver.hashCode() : 0);
+        result = 31 * result + (subject != null ? subject.hashCode() : 0);
+        result = 31 * result + (content != null ? content.hashCode() : 0);
         result = 31 * result + (sendTime != null ? sendTime.hashCode() : 0);
         return result;
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "eid", referencedColumnName = "eid", nullable = false)
-    public EmailContentEntity getEmailContentByEid() {
-        return emailContentByEid;
-    }
-
-    public void setEmailContentByEid(EmailContentEntity emailContentByEid) {
-        this.emailContentByEid = emailContentByEid;
     }
 }

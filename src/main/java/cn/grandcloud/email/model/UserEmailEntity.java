@@ -3,7 +3,7 @@ package cn.grandcloud.email.model;
 import javax.persistence.*;
 
 /**
- * Created by ÖÇ¿µ on 2015/6/23 0023.
+ * Created by æ™ºåº· on 2015/6/23 0023.
  */
 @Entity
 @Table(name = "userEmail", schema = "", catalog = "emaildb")

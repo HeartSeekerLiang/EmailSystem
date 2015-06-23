@@ -4,6 +4,7 @@ import cn.grandcloud.email.model.EmailContentEntity;
 import cn.grandcloud.email.repository.EmailContentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
@@ -77,6 +78,13 @@ public class EmailContentController {
         }
         emailContentRepository.updateEmailById(emailContentEntity.getSubject(), emailContentEntity.getContent(), emailContentEntity.getEid());
         emailContentRepository.flush();
+        return "redirect:/emails";
+    }
+
+    // 删除邮件
+    @RequestMapping(value = "/emails/delete/{eid}", method = RequestMethod.GET)
+    public String emailDelete(@PathVariable("eid") int eid) {
+        emailContentRepository.delete(eid);
         return "redirect:/emails";
     }
 

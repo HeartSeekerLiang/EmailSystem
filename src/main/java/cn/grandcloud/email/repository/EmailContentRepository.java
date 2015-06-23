@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 /**
- * Created by ÖÇ¿µ on 2015/6/23 0023.
+ * Created by æ™ºåº· on 2015/6/23 0023.
  */
 @Repository
 public interface EmailContentRepository extends JpaRepository<EmailContentEntity, Integer> {
