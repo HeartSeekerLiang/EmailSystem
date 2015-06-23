@@ -48,7 +48,7 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
-<!--    &lt;!&ndash; 表示JPA Repository所在的包 &ndash;&gt;
+    <!--表示JPA Repository所在的包 -->
     <jpa:repositories base-package="cn.grandcloud.email.repository"/>
 
     <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean">
@@ -59,6 +59,6 @@
         <property name="entityManagerFactory" ref="entityManagerFactory"/>
     </bean>
 
-    <tx:annotation-driven transaction-manager="transactionManager"/>-->
+    <tx:annotation-driven transaction-manager="transactionManager"/>
 
 </beans>
