@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: 智康
-  Date: 2015/6/23 0023
-  Time: 14:42
+  Date: 2015/6/24 0024
+  Time: 13:40
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -14,7 +14,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>错误</title>
+    <title>退订页面</title>
 
     <!-- 新 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -42,7 +42,14 @@
                 <div class="col-md-12">
                     <div class="panel panel-primary">
                         <div class="panel-body">
-                            <h3>${reason}</h3>
+                            <h3>退订结果</h3>
+                            <hr style="border-color: #0000cc"/>
+                            <c:if test="${result == 'true'}">
+                                <h4>退订成功</h4>
+                            </c:if>
+                            <c:if test="${result == 'false'}">
+                                <h4>退订失败</h4>
+                            </c:if>
                             <hr style="border-color: #0000cc"/>
                             <button type="button" class="btn btn-default" onclick="closeWin()">关闭</button>
                         </div>
@@ -69,4 +76,3 @@
 </script>
 </body>
 </html>
-

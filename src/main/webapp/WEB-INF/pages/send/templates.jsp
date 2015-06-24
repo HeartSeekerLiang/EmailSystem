@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: 智康
-  Date: 2015/6/23 0023
-  Time: 13:34
+  Date: 2015/6/24 0024
+  Time: 11:04
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -34,20 +34,20 @@
         <li role="presentation"><a href="">首页</a></li>
         <li role="presentation"><a href="/users">用户管理</a></li>
         <li role="presentation"><a href="/emails">邮件管理</a></li>
-        <li role="presentation" class="active"><a href="/send/normal">普通发送</a></li>
-        <li role="presentation"><a href="/send/template">模板发送</a></li>
+        <li role="presentation"><a href="/send/normal">普通发送</a></li>
+        <li role="presentation" class="active"><a href="/send/template">模板发送</a></li>
     </ul>
     <hr style="border-color: cadetblue"/>
 
     <div class="row">
         <div class="col-md-12">
 
-            <h1>普通发送
-                <a href="/send/normal/add" type="button" class="btn btn-success btn-sm">发送邮件</a>
+            <h1>模板发送
+                <a href="/send/template/add" type="button" class="btn btn-success btn-sm">发送邮件</a>
             </h1>
             <hr style="border-color: cadetblue"/>
 
-            <c:if test="${empty normalList}">
+           <%-- <c:if test="${empty normalList}">
                 <div class="alert alert-danger" role="alert">暂未发送任何邮件，请添加。</div>
             </c:if>
 
@@ -68,7 +68,7 @@
                         </tr>
                     </c:forEach>
                 </table>
-            </c:if>
+            </c:if>--%>
 
         </div>
     </div>
