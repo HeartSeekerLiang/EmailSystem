@@ -2,6 +2,8 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/src/main/java/cn/grandcloud/email/controller/SendNormalController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/cn/grandcloud/email/controller/SendTemplateController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/cn/grandcloud/email/controller/UnsubscribeController.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/cn/grandcloud/email/model/EmailContentEntity.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/cn/grandcloud/email/model/SendNormalEntity.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/cn/grandcloud/email/model/UserEmailEntity.java" charset="UTF-8" />

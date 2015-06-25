@@ -38,6 +38,8 @@
         <li role="presentation"><a href="/">首页</a></li>
         <li role="presentation"><a href="/users">用户管理</a></li>
         <li role="presentation" class="active"><a href="/emails">邮件管理</a></li>
+        <li role="presentation"><a href="/send/normal">普通发送</a></li>
+        <li role="presentation"><a href="/send/template">模板发送</a></li>
     </ul>
 
     <h1>编辑邮件</h1>
